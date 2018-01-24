@@ -9,21 +9,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var callLabel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     @IBAction func digitPressed(_ sender: UIButton) {
+        numberLabel.text?.append((sender.currentTitle)!)
+        if ((numberLabel.text?.count)! == 10){
+            callLabel.isEnabled = true
+        }
+        else {
+            callLabel.isEnabled = false
+        }
+
     }
+    
     @IBAction func makeCall(_ sender: UIButton) {
+        let temp = 1
     }
     
 }
