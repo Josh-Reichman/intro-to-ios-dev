@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var callLabel: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +29,19 @@ class ViewController: UIViewController {
         }
 
     }
+    @IBAction func deleteDigit(_ sender: UIButton) {
+        if ((numberLabel.text?.count)! != 0){
+            var labelTemp : String! = numberLabel.text!
+            labelTemp.removeLast()
+            numberLabel.text = labelTemp
+            print(labelTemp!)
+            print("deleted")
+        }
+    }
     
     @IBAction func makeCall(_ sender: UIButton) {
         let temp = 1
+        
     }
     
 }
