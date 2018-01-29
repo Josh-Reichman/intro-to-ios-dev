@@ -73,21 +73,22 @@ if let hello = optionalHello, hello.hasPrefix("H"), let name = optionalName {
     let greeting1 = "\(hello), \(name)"
     print(greeting1)
 }
-//
+////
 
 
 ///////////////// 1/26/2018 content below /////////////////
-//
+////
+//replaced vegetableComment to _ to remove warnings
 let vegetable = "red pepper"
 switch vegetable {
 case "celery":
-    let vegetableComment = "add some raisins"
+    _ = "add some raisins"
 case "cucumber", "watercress":
-    let vegetableComment = "don't add raisins"
+    _ = "don't add raisins"
 case let x where x.hasSuffix("pepper"):
-    let vegetableComment = "Is it spicy?"
+    _ = "Is it spicy?"
 default:
-    let vegetableComment = "everything else"
+    _ = "everything else"
 }
 vegetable.hasSuffix("le")
 ////
@@ -202,4 +203,112 @@ func isEven(number: Int) -> Bool{
 }
 var numbers = [23,43,56,49]
 hasAnyMatches(list: numbers, condition: isEven)
+////
+
+///////////////// 1/29/2018 content below /////////////////
+////
+typealias Time3 = (Int) -> Int
+var myClosure : Time3 = {
+    (number: Int) -> Int in
+    let result = number * 3
+    return result
+}
+myClosure(5)
+////
+
+////
+let scores2 = [98,79,83,100,60]
+scores2.map({
+    (number: Int) -> Int in
+    let result = number * 3
+    return result
+})
+//simplified version
+scores2.map({
+    number in
+    number * 3
+})
+//even more simple version (look in to why it runs 1 more time)
+scores2.map{$0 * 3}
+////
+
+////
+var sortedNumbers = scores2.sorted(by: {
+    (number1: Int, number2: Int) -> Bool in
+    return number1 > number2
+})
+scores2.sorted{$0>$1}
+scores2.sorted()
+////
+
+////
+class Shape {
+    var numberOfSides = 0
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+var myShape = Shape()
+myShape.simpleDescription()
+class NamedShape {
+    var numberOfSides = 0
+    var name: String
+    init(name: String){
+        //self. is the same as this.
+        self.name = name
+    }
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+var nameShape = NamedShape(name: "Square")
+nameShape.numberOfSides = 4
+nameShape.simpleDescription()
+////
+
+////
+//class inheritance
+//Equilateral Triangle
+class EquilateralTriangle: NamedShape{
+    var sideLength: Double
+    //init own vars first, then parent class
+    init(sideLength: Double, name: String){
+        self.sideLength = sideLength
+        super.init(name: name)
+        numberOfSides = 3
+    }
+    var perimeter: Double {
+        get {
+            return 3 * sideLength
+        }
+        set (myValue) {
+            sideLength = myValue/3
+        }
+    }
+    override func simpleDescription() -> String {
+        return "An Equilateral Triangle with sides of length \(sideLength)."
+    }
+}
+var triangle = EquilateralTriangle(sideLength: 3.1, name: "An Equilateral Triangle")
+triangle.perimeter
+triangle.perimeter = 15
+triangle.sideLength
+////
+
+////
+//Circle
+class Circle: NamedShape{
+    var radius: Double
+    //? means init may fail
+    init?(radius: Double, name: String){
+        self.radius = radius
+        super.init(name: name)
+        numberOfSides = 1
+        if radius <= 0 {
+            return nil
+        }
+    }
+}
+let failedCircle = Circle(radius: -1, name:"fail circle")
+let successfulCircle = Circle(radius: 1, name: "success circle")
 ////
