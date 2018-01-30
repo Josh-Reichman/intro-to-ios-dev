@@ -20,10 +20,10 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvg-AF-Blr">
                                 <rect key="frame" x="155" y="142" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="2" backgroundImage="Circle">
-                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,10 +34,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34X-bz-mfo">
                                 <rect key="frame" x="50" y="142" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="1" backgroundImage="Circle">
-                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,10 +48,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S51-0a-Twk">
                                 <rect key="frame" x="259" y="142" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="3" backgroundImage="Circle">
-                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,10 +62,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tei-uQ-TG2">
                                 <rect key="frame" x="155" y="244" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="5" backgroundImage="Circle">
-                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,10 +76,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhE-59-ZkQ">
                                 <rect key="frame" x="50" y="244" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="4" backgroundImage="Circle">
-                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -90,10 +90,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kve-Hn-1DH">
                                 <rect key="frame" x="259" y="244" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="6" backgroundImage="Circle">
-                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,10 +104,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emK-7N-O2T">
                                 <rect key="frame" x="155" y="341" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="8" backgroundImage="Circle">
-                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,10 +118,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTZ-ny-MCv">
                                 <rect key="frame" x="50" y="341" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="7" backgroundImage="Circle">
-                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,10 +132,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLq-hV-R7D">
                                 <rect key="frame" x="259" y="341" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="9" backgroundImage="Circle">
-                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,10 +146,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iom-g7-Neg">
                                 <rect key="frame" x="155" y="441" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="0" backgroundImage="Circle">
-                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,10 +160,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ro3-GQ-bKc">
                                 <rect key="frame" x="50" y="441" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="*" backgroundImage="Circle">
-                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -174,10 +174,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7h-cv-H8f">
                                 <rect key="frame" x="259" y="441" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="#" backgroundImage="Circle">
-                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected">
                                     <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -188,7 +188,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkI-zt-m4B">
                                 <rect key="frame" x="209" y="560" width="97" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                 <state key="normal" title="Call" backgroundImage="Circle">
                                     <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -200,23 +201,40 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pp8-M1-AvT">
-                                <rect key="frame" x="275" y="22" width="73" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="275" y="38" width="73" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Delete" backgroundImage="Circle">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.79000000000000004" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="deleteDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GHh-CO-qNx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uL-Ah-Y5U">
-                                <rect key="frame" x="16" y="30" width="251" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="16" y="46" width="251" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="25"/>
                                 <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIB-js-wRw">
+                                <rect key="frame" x="60" y="561" width="93" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                <state key="normal" title="Hangup" backgroundImage="Circle">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.51251997100000002" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hangUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KKb-xc-w11"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -224,6 +242,7 @@
                     <connections>
                         <outlet property="callLabel" destination="gkI-zt-m4B" id="25R-3j-QPY"/>
                         <outlet property="deleteButton" destination="pp8-M1-AvT" id="IPD-iY-v1h"/>
+                        <outlet property="hangupButton" destination="UIB-js-wRw" id="zEZ-hr-eYT"/>
                         <outlet property="numberLabel" destination="7uL-Ah-Y5U" id="JBX-vs-YQw"/>
                     </connections>
                 </viewController>
