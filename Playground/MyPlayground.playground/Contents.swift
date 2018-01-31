@@ -41,7 +41,7 @@ if(number < 10){
 }else if number > 100 {
     print("the number is too big")
 }else {
-    print("the number is between 10 and 100")
+ //   print("the number is between 10 and 100")
 }
 ////
 
@@ -55,7 +55,7 @@ for score in individualScores{
         teamScore += 1
     }
 }
-print(teamScore)
+//print(teamScore)
 ////
 
 ////
@@ -70,8 +70,8 @@ sum
 var optionalName: String? = "John"
 var optionalHello: String? = "Hello"
 if let hello = optionalHello, hello.hasPrefix("H"), let name = optionalName {
-    let greeting1 = "\(hello), \(name)"
-    print(greeting1)
+    _ = "\(hello), \(name)"
+  //  print(greeting1)
 }
 ////
 
@@ -312,3 +312,88 @@ class Circle: NamedShape{
 let failedCircle = Circle(radius: -1, name:"fail circle")
 let successfulCircle = Circle(radius: 1, name: "success circle")
 ////
+
+///////////////// 1/31/2018 content below /////////////////
+////
+//Continued from code above
+class Square: NamedShape {
+    var sideLength : Double
+    init(sideLength: Double, name: String) {
+        self.sideLength = sideLength
+        super.init(name: name)
+        numberOfSides = 4
+    }
+    func area() -> Double {
+        return sideLength*sideLength
+    }
+    override func simpleDescription() -> String {
+        return "A square with sides of length \(sideLength)"
+    }
+}
+let shapesArray = [EquilateralTriangle(sideLength: 1.5, name: "T1"),EquilateralTriangle(sideLength: 4.5, name: "T2"), Square(sideLength: 3.5, name:"S1"),Square(sideLength: 5.5, name:"S2")]
+
+for shape in shapesArray{
+    if let square = shape as? Square {
+        square.area()
+    }
+    else if let tri = shape as? EquilateralTriangle{
+        
+    }
+}
+////
+
+////
+class TriangleAndSquare{
+    var triangle: EquilateralTriangle{
+        willSet{
+            square.sideLength = newValue.sideLength
+        }
+    }
+    var square: Square{
+        willSet{
+            triangle.sideLength = newValue.sideLength
+        }
+    }
+    init(size: Double, name: String){
+        square = Square(sideLength: size, name: name)
+        triangle = EquilateralTriangle(sideLength: size, name: name)
+    }
+}
+var TAndS = TriangleAndSquare(size: 10, name: "test")
+TAndS.triangle = EquilateralTriangle(sideLength: 15, name: "T3")
+////
+
+////
+struct LevelTracker{
+    static var highestUnlockedLevel = 1
+    var currentLevel = 1
+    
+    static func unlock(_ level: Int){
+        highestUnlockedLevel = level
+    }
+    
+    static func isUnlocked(_ level: Int) -> Bool{
+        return level < highestUnlockedLevel
+    }
+    @discardableResult //optional
+    mutating func advance(to level: Int) -> Bool{
+        if LevelTracker.isUnlocked(level){
+            currentLevel = level
+            return true
+        }
+        else{
+            return false
+        }
+    }
+}
+////
+
+////
+class Player {
+    var tracker = LevelTracker(currentLevel: 1)
+    //let playerName : String
+    func completed(level: Int){
+        LevelTracker.unlock(level+1)
+        tracker.advance(to: level+1)
+    }
+}
