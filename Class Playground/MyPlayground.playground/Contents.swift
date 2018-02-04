@@ -3,6 +3,7 @@
 import UIKit
 
 ///////////////// 1/22/2018 content below /////////////////
+
 ////
 //NOTE: let = constant, var = variable
 var optionalStr : String?
@@ -75,8 +76,8 @@ if let hello = optionalHello, hello.hasPrefix("H"), let name = optionalName {
 }
 ////
 
-
 ///////////////// 1/26/2018 content below /////////////////
+
 ////
 //replaced vegetableComment to _ to remove warnings
 let vegetable = "red pepper"
@@ -206,6 +207,7 @@ hasAnyMatches(list: numbers, condition: isEven)
 ////
 
 ///////////////// 1/29/2018 content below /////////////////
+
 ////
 typealias Time3 = (Int) -> Int
 var myClosure : Time3 = {
@@ -314,6 +316,7 @@ let successfulCircle = Circle(radius: 1, name: "success circle")
 ////
 
 ///////////////// 1/31/2018 content below /////////////////
+
 ////
 //Continued from code above
 class Square: NamedShape {
@@ -366,12 +369,10 @@ TAndS.triangle = EquilateralTriangle(sideLength: 15, name: "T3")
 ////
 struct LevelTracker{
     static var highestUnlockedLevel = 1
-    var currentLevel = 1
-    
+    var currentLevel : Int
     static func unlock(_ level: Int){
         highestUnlockedLevel = level
     }
-    
     static func isUnlocked(_ level: Int) -> Bool{
         return level < highestUnlockedLevel
     }
@@ -396,4 +397,68 @@ class Player {
         LevelTracker.unlock(level+1)
         tracker.advance(to: level+1)
     }
+}
+////
+
+///////////////// 2/2/2018 content below /////////////////
+
+////
+enum Rank: Int {
+    case Ace = 1
+    case Two, Three, Four
+    case Five, Six, Seven, Eight, Nine, Ten
+    case Jack, Queen, King
+    func simpleDescription() -> String {
+        switch self {
+        case .Ace:
+            return "ace"
+        case .Jack:
+            return "jack"
+        case .Queen:
+            return "queen"
+        case .King:
+            return "king"
+        default:
+            return String(self.rawValue)
+        }
+    }
+}
+enum Suit {
+    case Spades, Hearts, Diamonds, Clubs
+    func simpleDescription() -> String {
+        switch self {
+        case .Spades:
+            return "spades"
+        case .Hearts:
+            return "hearts"
+        case .Diamonds:
+            return "diamonds"
+            //case .Clubs:
+        //    return "clubs"
+        case .Clubs:
+            return "clubs"
+        }
+    }
+}
+let ace = Rank.Ace
+let aceRawValue = ace.rawValue
+var card = Rank.Three
+var cardRawValue = card.rawValue
+var hearts = Suit.Hearts
+let heartsDescription = hearts.simpleDescription()
+hearts = .Clubs
+////
+
+////
+enum Barcode{
+    case UPCA(Int, Int, Int, Int)
+    case QRCode(String)
+}
+var productBarcode = Barcode.UPCA(8, 85900, 51226, 3)
+productBarcode = .QRCode("ABCDEFGHIJKLMNOP")
+switch productBarcode {
+case .UPCA(let numberSystem, var manufacturer, let product, let check):
+    print("UPC-A: \(numberSystem), \(manufacturer), \(product), \(check).")
+case .QRCode(let productCode):
+    print("QR code: \(productCode).")
 }
