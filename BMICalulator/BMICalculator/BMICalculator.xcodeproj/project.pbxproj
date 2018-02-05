@@ -12,6 +12,7 @@
 		0809796D2028B38300BBA736 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0809796B2028B38300BBA736 /* Main.storyboard */; };
 		0809796F2028B38300BBA736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0809796E2028B38300BBA736 /* Assets.xcassets */; };
 		080979722028B38300BBA736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080979702028B38300BBA736 /* LaunchScreen.storyboard */; };
+		0809797A2028B57900BBA736 /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080979792028B57900BBA736 /* BMIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0809796E2028B38300BBA736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		080979712028B38300BBA736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		080979732028B38300BBA736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		080979792028B57900BBA736 /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				080979672028B38300BBA736 /* AppDelegate.swift */,
 				080979692028B38300BBA736 /* ViewController.swift */,
 				0809796B2028B38300BBA736 /* Main.storyboard */,
+				080979792028B57900BBA736 /* BMIViewController.swift */,
 				0809796E2028B38300BBA736 /* Assets.xcassets */,
 				080979702028B38300BBA736 /* LaunchScreen.storyboard */,
 				080979732028B38300BBA736 /* Info.plist */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0809796A2028B38300BBA736 /* ViewController.swift in Sources */,
+				0809797A2028B57900BBA736 /* BMIViewController.swift in Sources */,
 				080979682028B38300BBA736 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
