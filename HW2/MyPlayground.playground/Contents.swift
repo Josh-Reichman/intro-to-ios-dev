@@ -3,15 +3,20 @@
 /*
  1. create a function that take a string defined on {1, 2, 3, 4, 5, 6, 7, 8, 9} as input, return the number of digits that are odd, even and divisible by 3
  */
-func numbers() -> String{
+func numbers(input: String) -> String{
+    let inputConverted : Int = Int(input)!
     //var odd : Int = 0
     //var even : Int = 0
     //var div3 : Int = 0
+    
     return ""
 }
 /*
  2. Write a variadic function (function with variable number of parameters) called cat(), its first parameter is a string/char serving as a delimiter, followed by any number of intergers. It returns a string that concaternate all the digits but separated by the delimiter. The default value of the first parameter is " ". For example: if you call print(cat(joiner:":", nums: 1,2,3,4,5,6,7,8,9)), output should be 1:2:3:4:5:6:7:8:9 if you call print(cat(nums: 1,2,3,4,5)), out put should be 1 2 3 4 5
  */
+func cat(numbers: Int ...) -> String{
+    return cat(delimiter: " ", numbers: numbers)
+}
 func cat(delimiter: String, numbers: Int ...) -> String{
     return ""
 }
@@ -39,6 +44,7 @@ struct student{
     let studentName : String
     let dateOfBirth : DOB
 }
+
 struct DOB {
     let month :Int
     let day : Int
@@ -67,15 +73,16 @@ class Vehicle{
     let doors : Int
     let color : Color
     let wheels : Int
-    //init(){
-        //self.model = model
-    //    self.doors = 2
-        //self.color = color
-        //self.wheels = wheels
-    //}
+
     init(model: String, doors: Int, color: Color, wheels: Int){
         self.model = model
         self.doors = doors
+        self.color = color
+        self.wheels = wheels
+    }
+    init(model: String, color: Color, wheels: Int){
+        self.model = model
+        self.doors = 2
         self.color = color
         self.wheels = wheels
     }
@@ -96,6 +103,10 @@ enum Color{
 
 class MotorVehicle : Vehicle{
     let licensePlate : String
+    init(licensePlate: String, model: String, color: Color, wheels: Int){
+        self.licensePlate = licensePlate
+        super.init(model: model, color: color, wheels: wheels)
+    }
     init(licensePlate: String, model: String, doors: Int, color: Color, wheels: Int){
         self.licensePlate = licensePlate
         super.init(model: model, doors: doors, color: color, wheels: wheels)
