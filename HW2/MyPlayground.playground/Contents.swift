@@ -23,17 +23,33 @@ func numbers(input: String) -> String{
     }
     return "Odd: \(odd)\nEven: \(even)\nDivisible by 3: \(divThree)"
 }
-print(numbers(input: "31"))
+print(numbers(input: "123456789"))
 /*
  2. Write a variadic function (function with variable number of parameters) called cat(), its first parameter is a string/char serving as a delimiter, followed by any number of intergers. It returns a string that concaternate all the digits but separated by the delimiter. The default value of the first parameter is " ". For example: if you call print(cat(joiner:":", nums: 1,2,3,4,5,6,7,8,9)), output should be 1:2:3:4:5:6:7:8:9 if you call print(cat(nums: 1,2,3,4,5)), out put should be 1 2 3 4 5
  */
+
 func cat(numbers: Int ...) -> String{
-    //return cat(delimiter: " ", numbers: numbers)
-    return ""
+    var numbersTemp = numbers
+    var outputString = ""
+    while !numbersTemp.isEmpty {
+        outputString.append(String(numbersTemp.remove(at: 0)) + " ")
+    }
+    outputString.removeLast()
+    return outputString
 }
+
 func cat(delimiter: String, numbers: Int ...) -> String{
-    return ""
+    var numbersTemp = numbers
+    var outputString = ""
+    while !numbersTemp.isEmpty {
+        outputString.append(String(numbersTemp.remove(at: 0)) + delimiter)
+    }
+    outputString.removeLast()
+    return outputString
 }
+print(cat(delimiter: ":", numbers: 1,2,3,4,5,6,7,8,9))
+print(cat(numbers: 1,2,3,4,5,6,7,8,9))
+
 /*
  3. The Fibonacci numbers is a series of numbers that can be defined recursively, i.e., n(1)=1, n(2)=1, n(i+1) = n(i) + n(i-1) for i>=2. Given an integer n>=1, Implement an efficient algorithm/function to calcuate the n^{th} Fibonacci number. Your algorithm should be able to calculate n=90.
  */
@@ -66,19 +82,19 @@ struct DOB {
     let age : Int
 }
 /*
-func calulateAge(month: Int, day: Int, year: Int) -> Int{
-    var dateComponents = dateComponent()
-    dateComponents.month = this.month
-    let month = dateComponent(this.month)
-    let day = dateComponent(this.day)
-    let year = dateComponent(this.year)
-    
-    let date2 = Calendar.current
-    var DOBDay = Calendar.Component.day(.Day)
-    
-}
-*/
- /*
+ func calulateAge(month: Int, day: Int, year: Int) -> Int{
+ var dateComponents = dateComponent()
+ dateComponents.month = this.month
+ let month = dateComponent(this.month)
+ let day = dateComponent(this.day)
+ let year = dateComponent(this.year)
+ 
+ let date2 = Calendar.current
+ var DOBDay = Calendar.Component.day(.Day)
+ 
+ }
+ */
+/*
  5 Create a Vehicle class that contains the following properties: model, doors, color – either red, blue, or white,  wheels. Create a subclass of Vehicle named MotorVehicle. Add an additional property to it named licensePlate. Create a subclass of Vehicle named Bicycle. Create a subclass of MotorVehicle named Car. Create the following initializers: an initializer that sets doors to 2, an initializer that initializes the model, doors, color, and wheels, a convenience initializer that initializes licensePlate and calls the initializer that initializes the model, doors, color, and wheels.
  */
 
@@ -87,7 +103,7 @@ class Vehicle{
     let doors : Int
     let color : Color
     let wheels : Int
-
+    
     init(model: String, doors: Int, color: Color, wheels: Int){
         self.model = model
         self.doors = doors
@@ -132,3 +148,5 @@ class Bicycle : Vehicle{
 class Car: MotorVehicle {
     
 }
+let cars =  Car(licensePlate: "2213", model: "meme", doors: 3, color: Color.BLUE, wheels: 4)
+let fve = Bicycle(model: "w", color: Color.BLUE, wheels: 2)
