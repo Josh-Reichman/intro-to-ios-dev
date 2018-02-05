@@ -4,18 +4,32 @@
  1. create a function that take a string defined on {1, 2, 3, 4, 5, 6, 7, 8, 9} as input, return the number of digits that are odd, even and divisible by 3
  */
 func numbers(input: String) -> String{
-    let inputConverted : Int = Int(input)!
-    //var odd : Int = 0
-    //var even : Int = 0
-    //var div3 : Int = 0
-    
-    return ""
+    var inputTemp = input
+    var numberTemp : Int
+    var odd : Int = 0
+    var even : Int = 0
+    var divThree : Int = 0
+    while !inputTemp.isEmpty {
+        numberTemp = Int(String(inputTemp.remove(at: inputTemp.startIndex)))!
+        if (numberTemp % 2 == 0) {
+            even+=1
+        }
+        else{
+            odd+=1
+        }
+        if (numberTemp % 3 == 0){
+            divThree+=1
+        }
+    }
+    return "Odd: \(odd)\nEven: \(even)\nDivisible by 3: \(divThree)"
 }
+print(numbers(input: "31"))
 /*
  2. Write a variadic function (function with variable number of parameters) called cat(), its first parameter is a string/char serving as a delimiter, followed by any number of intergers. It returns a string that concaternate all the digits but separated by the delimiter. The default value of the first parameter is " ". For example: if you call print(cat(joiner:":", nums: 1,2,3,4,5,6,7,8,9)), output should be 1:2:3:4:5:6:7:8:9 if you call print(cat(nums: 1,2,3,4,5)), out put should be 1 2 3 4 5
  */
 func cat(numbers: Int ...) -> String{
-    return cat(delimiter: " ", numbers: numbers)
+    //return cat(delimiter: " ", numbers: numbers)
+    return ""
 }
 func cat(delimiter: String, numbers: Int ...) -> String{
     return ""
@@ -51,7 +65,7 @@ struct DOB {
     let year : Int
     let age : Int
 }
-
+/*
 func calulateAge(month: Int, day: Int, year: Int) -> Int{
     var dateComponents = dateComponent()
     dateComponents.month = this.month
@@ -63,7 +77,7 @@ func calulateAge(month: Int, day: Int, year: Int) -> Int{
     var DOBDay = Calendar.Component.day(.Day)
     
 }
-
+*/
  /*
  5 Create a Vehicle class that contains the following properties: model, doors, color – either red, blue, or white,  wheels. Create a subclass of Vehicle named MotorVehicle. Add an additional property to it named licensePlate. Create a subclass of Vehicle named Bicycle. Create a subclass of MotorVehicle named Car. Create the following initializers: an initializer that sets doors to 2, an initializer that initializes the model, doors, color, and wheels, a convenience initializer that initializes licensePlate and calls the initializer that initializes the model, doors, color, and wheels.
  */
