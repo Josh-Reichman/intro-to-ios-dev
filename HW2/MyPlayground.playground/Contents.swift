@@ -1,5 +1,3 @@
-//: Playground - noun: a place where people can play
-
 /*
  1. create a function that take a string defined on {1, 2, 3, 4, 5, 6, 7, 8, 9} as input, return the number of digits that are odd, even and divisible by 3
  */
@@ -27,7 +25,6 @@ print(numbers(input: "123456789"))
 /*
  2. Write a variadic function (function with variable number of parameters) called cat(), its first parameter is a string/char serving as a delimiter, followed by any number of intergers. It returns a string that concaternate all the digits but separated by the delimiter. The default value of the first parameter is " ". For example: if you call print(cat(joiner:":", nums: 1,2,3,4,5,6,7,8,9)), output should be 1:2:3:4:5:6:7:8:9 if you call print(cat(nums: 1,2,3,4,5)), out put should be 1 2 3 4 5
  */
-
 func cat(numbers: Int ...) -> String{
     var numbersTemp = numbers
     var outputString = ""
@@ -37,7 +34,6 @@ func cat(numbers: Int ...) -> String{
     outputString.removeLast()
     return outputString
 }
-
 func cat(delimiter: String, numbers: Int ...) -> String{
     var numbersTemp = numbers
     var outputString = ""
@@ -64,6 +60,7 @@ func calculateFibonacci(n: Int) {
     print("result = \(num2)")
 }
 calculateFibonacci(n: 90)
+
 /*
  4  Create a structure to store the information of a student. The structure needs to be able to store the following information: Student ID (String) Student Name (String) Date of birth (DOB). DOB itself is also a struture containing the year, month, and day. Add a computed property named age to the student structure so that you can obtain the age of a student. Create an instance of the structure and print out the age of the student.
  */
@@ -73,31 +70,43 @@ struct student{
     let studentID : String
     let studentName : String
     let dateOfBirth : DOB
+    let age : Int
+    init(id: String, name: String, birthDate: DOB) {
+        studentID = id
+        studentName = name
+        dateOfBirth = birthDate
+        age = dateOfBirth.calculateAge()
+    }
+    func getAge() -> Int {
+       return age
+    }
 }
 
 struct DOB {
-    let month :Int
-    let day : Int
-    let year : Int
-    let age : Int
+    var month : Int
+    var day : Int
+    var year : Int
+    
+    init(m: Int, d: Int, y: Int) {
+        month = m
+        day = d
+        year = y
+        //age = calculateAge(year: year)
+    }
+    func calculateAge() -> Int{
+        return 2018 - year
+    }
 }
-/*
- func calulateAge(month: Int, day: Int, year: Int) -> Int{
- var dateComponents = dateComponent()
- dateComponents.month = this.month
- let month = dateComponent(this.month)
- let day = dateComponent(this.day)
- let year = dateComponent(this.year)
- 
- let date2 = Calendar.current
- var DOBDay = Calendar.Component.day(.Day)
- 
- }
- */
+//Does not consider month. Assumes it is 2018
+
+
+let Student1 = student(id: "ABC123", name: "Bob Smith", birthDate: DOB(m: 1, d: 1, y: 1996))
+print(Student1.getAge())
+
+
 /*
  5 Create a Vehicle class that contains the following properties: model, doors, color – either red, blue, or white,  wheels. Create a subclass of Vehicle named MotorVehicle. Add an additional property to it named licensePlate. Create a subclass of Vehicle named Bicycle. Create a subclass of MotorVehicle named Car. Create the following initializers: an initializer that sets doors to 2, an initializer that initializes the model, doors, color, and wheels, a convenience initializer that initializes licensePlate and calls the initializer that initializes the model, doors, color, and wheels.
  */
-
 class Vehicle{
     let model : String
     let doors : Int
@@ -143,10 +152,17 @@ class MotorVehicle : Vehicle{
     }
 }
 class Bicycle : Vehicle{
-    
+    init(){
+        super.init(model: "", doors: 0, color: Color.RED, wheels: 2);
+    }
 }
+
 class Car: MotorVehicle {
-    
+    init(licensePlate: String, model: String, color: Color) {
+        super.init(licensePlate: licensePlate, model: model,doors: 4, color: color, wheels: 4)
+    }
 }
-let cars =  Car(licensePlate: "2213", model: "meme", doors: 3, color: Color.BLUE, wheels: 4)
-let fve = Bicycle(model: "w", color: Color.BLUE, wheels: 2)
+let fbiExperimentalVehicle = Vehicle(model: "Unknown", color: Color.WHITE, wheels: 7)
+let truck = MotorVehicle(licensePlate: "test", model: "Test Mk I", doors: 2, color: Color.WHITE, wheels: 8)
+let cars =  Car(licensePlate: "test 2", model: "Test Mk II", color: Color.RED)
+let bike = Bicycle()
