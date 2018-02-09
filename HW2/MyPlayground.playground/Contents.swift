@@ -152,8 +152,8 @@ class MotorVehicle : Vehicle{
     }
 }
 class Bicycle : Vehicle{
-    init(){
-        super.init(model: "", doors: 0, color: Color.RED, wheels: 2);
+    convenience init(){
+        self.init(model: "", doors: 0, color: Color.RED, wheels: 2);
     }
 }
 
