@@ -3,3 +3,5 @@
 *.xcworkspacedata
 *.xcplayground
 *.xcbkptlist
+
+*.json
