@@ -339,7 +339,7 @@ for shape in shapesArray{
     if let square = shape as? Square {
         square.area()
     }
-    else if let tri = shape as? EquilateralTriangle{
+    else if shape is EquilateralTriangle{
         
     }
 }
@@ -457,8 +457,31 @@ enum Barcode{
 var productBarcode = Barcode.UPCA(8, 85900, 51226, 3)
 productBarcode = .QRCode("ABCDEFGHIJKLMNOP")
 switch productBarcode {
-case .UPCA(let numberSystem, var manufacturer, let product, let check):
+case .UPCA(let numberSystem, let manufacturer, let product, let check):
     print("UPC-A: \(numberSystem), \(manufacturer), \(product), \(check).")
 case .QRCode(let productCode):
     print("QR code: \(productCode).")
+}
+////
+
+///////////////// 2/9/2018 content below /////////////////
+
+////
+protocol UIProtocol{
+    var simpleDescription: String {get}
+    func adjust()
+}
+class SimpleClass: UIProtocol{
+    var simpleDescription: String = "A vary simple class."
+    var anotherProperty: Int = 32
+    func adjust() {
+        simpleDescription += "now 100% adjusted"
+    }
+}
+class UISomething{
+    var delegate: UIProtocol?
+    func anotherFunction(){
+        delegate?.adjust()
+        let tmp = delegate?.simpleDescription
+    }
 }

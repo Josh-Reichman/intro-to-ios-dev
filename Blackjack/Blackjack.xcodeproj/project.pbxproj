@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		088DF894202DFE820056D13E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DF893202DFE820056D13E /* AppDelegate.swift */; };
-		088DF896202DFE820056D13E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DF895202DFE820056D13E /* ViewController.swift */; };
+		088DF896202DFE820056D13E /* BlackJackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DF895202DFE820056D13E /* BlackJackViewController.swift */; };
 		088DF899202DFE820056D13E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088DF897202DFE820056D13E /* Main.storyboard */; };
 		088DF89B202DFE820056D13E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088DF89A202DFE820056D13E /* Assets.xcassets */; };
 		088DF89E202DFE820056D13E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088DF89C202DFE820056D13E /* LaunchScreen.storyboard */; };
+		088DF8A6202E027D0056D13E /* BlackJackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DF8A5202E027D0056D13E /* BlackJackModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		088DF890202DFE820056D13E /* Blackjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blackjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		088DF893202DFE820056D13E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		088DF895202DFE820056D13E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		088DF895202DFE820056D13E /* BlackJackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackViewController.swift; sourceTree = "<group>"; };
 		088DF898202DFE820056D13E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		088DF89A202DFE820056D13E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		088DF89D202DFE820056D13E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		088DF89F202DFE820056D13E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		088DF8A5202E027D0056D13E /* BlackJackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				088DF893202DFE820056D13E /* AppDelegate.swift */,
-				088DF895202DFE820056D13E /* ViewController.swift */,
+				088DF895202DFE820056D13E /* BlackJackViewController.swift */,
 				088DF897202DFE820056D13E /* Main.storyboard */,
+				088DF8A5202E027D0056D13E /* BlackJackModel.swift */,
 				088DF89A202DFE820056D13E /* Assets.xcassets */,
 				088DF89C202DFE820056D13E /* LaunchScreen.storyboard */,
 				088DF89F202DFE820056D13E /* Info.plist */,
@@ -136,8 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				088DF896202DFE820056D13E /* ViewController.swift in Sources */,
+				088DF896202DFE820056D13E /* BlackJackViewController.swift in Sources */,
 				088DF894202DFE820056D13E /* AppDelegate.swift in Sources */,
+				088DF8A6202E027D0056D13E /* BlackJackModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

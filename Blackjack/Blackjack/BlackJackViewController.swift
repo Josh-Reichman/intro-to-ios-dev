@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BlackJackViewController.swift
 //  Blackjack
 //
 //  Created by Josh Reichman on 2/9/18.
@@ -7,9 +7,10 @@
 //
 
 import UIKit
+class BlackJackViewController: UIViewController {
 
-class ViewController: UIViewController {
-
+    @IBOutlet var dealerCards: [UIImageView]!
+    @IBOutlet var playerCards: [UIImageView]!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +21,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func userClickStand(_ sender: UIButton) {
+    }
+    
+    @IBAction func userClickHit(_ sender: UIButton) {
+    }
 }
 
