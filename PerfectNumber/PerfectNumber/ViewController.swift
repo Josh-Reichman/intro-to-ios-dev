@@ -10,8 +10,8 @@
  */
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var startField: UITextField!
     @IBOutlet weak var endField: UITextField!
     @IBOutlet weak var calculateButton: UIButton!
@@ -27,12 +27,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculate(_ sender: UIButton) {
-        resultLabel.text = String(describing: perfectFinder(start: Int(startField.text!)!, end: Int(endField.text!)!))
+        resultLabel.text = perfectFinder(start: Int(startField.text!)!, end: Int(endField.text!)!)
     }
-    func perfectFinder(start: Int, end: Int) -> Int? {
+    func perfectFinder(start: Int, end: Int) -> String {
         if(start>end){
-            return nil
+            return "Invalid Range"
         }
+        resultLabel.text = "Calculating..."
         var currentNumber : Int
         if(start <= 1){
             currentNumber = 2
@@ -53,12 +54,15 @@ class ViewController: UIViewController {
             }
             if(sum == temp)
             {
-                return currentNumber
+                return String(currentNumber)
             }
             currentNumber+=1
         }
-        return nil
+        return "No Perfect Number"
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        startField.resignFirstResponder()
+        endField.resignFirstResponder()
     }
     
-
 }
