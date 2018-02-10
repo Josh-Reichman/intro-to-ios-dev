@@ -15,24 +15,50 @@ class ViewController: UIViewController {
     @IBOutlet weak var startField: UITextField!
     @IBOutlet weak var endField: UITextField!
     @IBOutlet weak var calculateButton: UIButton!
+    @IBOutlet weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.resignFirstResponder()
-        
     }
-    //https://rosettacode.org/wiki/Perfect_numbers#Swift
-    func perfect(n:Int) -> Bool {
-        var sum = 0
-        for i in 1..<n {
-            if n % i == 0 {
-                sum += i
-            }
+    
+    @IBAction func calculate(_ sender: UIButton) {
+        resultLabel.text = String(describing: perfectFinder(start: Int(startField.text!)!, end: Int(endField.text!)!))
+    }
+    func perfectFinder(start: Int, end: Int) -> Int? {
+        if(start>end){
+            return nil
         }
-        return sum == n
+        var currentNumber : Int
+        if(start <= 1){
+            currentNumber = 2
+        }
+        else{
+            currentNumber = start
+        }
+        var temp = currentNumber
+        while (currentNumber <= end) {
+            var sum = 0
+            temp = currentNumber
+            for n in 1 ... currentNumber-1
+            {
+                if(currentNumber%n==0)
+                {
+                    sum = sum + n
+                }
+            }
+            if(sum == temp)
+            {
+                return currentNumber
+            }
+            currentNumber+=1
+        }
+        return nil
     }
+    
 
 }

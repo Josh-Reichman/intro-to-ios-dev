@@ -22,6 +22,9 @@
                                 <rect key="frame" x="146" y="220" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d7h-fY-Ggr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perfect Number Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esV-Re-9sx">
                                 <rect key="frame" x="49" y="66" width="277" height="21"/>
@@ -52,6 +55,13 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholderLabel.Text" value="End"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JK-xS-7h2">
+                                <rect key="frame" x="173" y="173" width="42" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,6 +69,7 @@
                     <connections>
                         <outlet property="calculateButton" destination="krK-IM-Sb5" id="9Nj-n8-b10"/>
                         <outlet property="endField" destination="uTn-gV-dCD" id="4PE-m6-Adj"/>
+                        <outlet property="resultLabel" destination="5JK-xS-7h2" id="FFR-MH-EHc"/>
                         <outlet property="startField" destination="HHA-pn-rMF" id="vL4-mJ-CEE"/>
                     </connections>
                 </viewController>
