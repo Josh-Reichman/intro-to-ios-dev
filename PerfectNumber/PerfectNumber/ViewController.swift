@@ -27,7 +27,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func calculate(_ sender: UIButton) {
+        if(startField.text == "" || endField.text == ""){
+            resultLabel.text = "Invalid input"
+        }
+        else{
         resultLabel.text = perfectFinder(start: Int(startField.text!)!, end: Int(endField.text!)!)
+        }
     }
     func perfectFinder(start: Int, end: Int) -> String {
         if(start>end){
