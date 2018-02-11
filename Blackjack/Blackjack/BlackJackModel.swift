@@ -24,3 +24,14 @@ class Card {
     var suit: Suit = .club
     var digit = 1
 }
+/*
+class Deck{
+    static func generateCards(NumberOfDecks: Int) -> [Card]{
+        
+    }
+}
+
+func shuffle(cards: [Card]) -> [Card]{
+    
+}
+*/

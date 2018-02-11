@@ -7,24 +7,30 @@
 //
 
 import UIKit
-class BlackJackViewController: UIViewController {
+class BlackJackViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var dealerCards: [UIImageView]!
     @IBOutlet var playerCards: [UIImageView]!
+    @IBOutlet weak var numOfDecksField: UITextField!
+    @IBOutlet weak var generateDecksButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
+    @IBAction func userHitShuffle(_ sender: UIButton) {
+    }
     @IBAction func userClickStand(_ sender: UIButton) {
     }
-    
     @IBAction func userClickHit(_ sender: UIButton) {
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if(numOfDecksField.text == "" || (Int(numOfDecksField.text!)!) < 0){
+            numOfDecksField.text = "1"
+        }
+        numOfDecksField.resignFirstResponder()
     }
 }
 
