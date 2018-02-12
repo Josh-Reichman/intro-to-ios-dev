@@ -14,12 +14,46 @@ class BlackJackViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var numOfDecksField: UITextField!
     @IBOutlet weak var generateDecksButton: UIButton!
     
+    var gameModel: BlackJackGameModel
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        gameModel = BlackJackGameModel()
+        super.init(coder: aDecoder)
+    }
+    
+    func restartGame(){
+        gameModel.resetGame()
+        var card = gameModel.nextDealerCard()
+        card = gameModel.nextDealerCard()
+        card.isFaceUp = false
+        
+        card = gameModel.nextPlayerCard()
+        card = gameModel.nextPlayerCard()
+    }
+    
+    func renderCards() {
+        for i in 0 ..< gameModel.maxPlayerCards {
+            if let dealerCard = gameModel.dealerCardAtIndex(index:i){
+                dealerCards[i].image = dealerCard.getCardImage()
+            }
+            else{
+                dealerCards[i].isHidden = true
+            }
+            
+            if let playerCard = gameModel.playerCardAtIndex(index:i){
+                playerCards[i].image = playerCard.getCardImage()
+            }
+            else{
+                playerCards[i].isHidden = true
+            }
+        }
+    }
+    
     @IBAction func userHitShuffle(_ sender: UIButton) {
     }
     @IBAction func userClickStand(_ sender: UIButton) {
@@ -27,7 +61,7 @@ class BlackJackViewController: UIViewController, UITextFieldDelegate {
     @IBAction func userClickHit(_ sender: UIButton) {
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if(numOfDecksField.text == "" || (Int(numOfDecksField.text!)!) < 0){
+        if(numOfDecksField.text == "" || (Int(numOfDecksField.text!)!) <= 0){
             numOfDecksField.text = "1"
         }
         numOfDecksField.resignFirstResponder()
