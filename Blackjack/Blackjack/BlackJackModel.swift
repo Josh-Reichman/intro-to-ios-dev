@@ -29,6 +29,7 @@ class Card {
     var suit: Suit = .club
     var digit = 1
     var isFaceUp = true
+    
     init(suit: Suit, digit: Int) {
         self.suit = suit
         self.digit = digit
@@ -36,7 +37,7 @@ class Card {
     
     static func generateDeck() -> [Card]{
         var deckOfCards = [Card]()
-        for i in 0...4{
+        for i in 0..<4{
             for j in 1...13{
                 deckOfCards.append(Card(suit: Suit(rawValue: i)!, digit: j))
             }

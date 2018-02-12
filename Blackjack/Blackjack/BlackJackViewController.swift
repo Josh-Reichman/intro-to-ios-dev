@@ -34,6 +34,7 @@ class BlackJackViewController: UIViewController, UITextFieldDelegate {
         
         card = gameModel.nextPlayerCard()
         card = gameModel.nextPlayerCard()
+        renderCards()
     }
     
     func renderCards() {
