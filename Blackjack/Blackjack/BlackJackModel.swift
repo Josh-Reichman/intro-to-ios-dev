@@ -44,6 +44,7 @@ class Card {
         }
         return deckOfCards
     }
+    
     func getCardImage() -> UIImage? {
         if isFaceUp{
             return UIImage(named: "\(suit.simpleDescription())-\(digit).png") //name-#.png
@@ -64,10 +65,18 @@ class BlackJackGameModel {
     init() {
         resetGame()
     }
-    
+    func shuffle(cards: [Card]){
+        var copy = cards
+        var shuffledTemp = [Card]()
+        for _ in 0..<shuffledTemp.count{
+            let rand = Int(arc4random_uniform(UInt32(shuffledTemp.count)))
+            shuffledTemp.append(copy.remove(at: rand))
+        }
+        self.cards = shuffledTemp
+    }
     func resetGame() {
         cards = Card.generateDeck()
-        //shuffle code here
+        
         playerCards = [Card]()
         dealerCards = [Card]()
     }
@@ -98,8 +107,4 @@ class BlackJackGameModel {
         }
     }
 }
-/*
- func shuffle(cards: [Card]) -> [Card]{
- 
- }
- */
+

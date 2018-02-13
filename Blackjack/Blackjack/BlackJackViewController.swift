@@ -18,6 +18,7 @@ class BlackJackViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -55,7 +56,22 @@ class BlackJackViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func userHitShuffle(_ sender: UIButton) {
+    @IBAction func userClickGenerate(_ sender: UIButton) {
+        var decks = [[Card]]()
+        for _ in 0 ..< Int(numOfDecksField.text!)!{
+            decks.append(Card.generateDeck())
+        }
+        
+        //var decksCopy = [[Card]]()
+        
+        for i in 0 ..< Int(numOfDecksField.text!)!{
+            gameModel.shuffle(cards: decks[i])
+        }
+        //decks = decksCopy
+        print(decks)
+    }
+    @IBAction func userClickShuffle(_ sender: UIButton) {
+        
     }
     @IBAction func userClickStand(_ sender: UIButton) {
     }
