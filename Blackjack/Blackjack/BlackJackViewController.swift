@@ -70,8 +70,16 @@ class BlackJackViewController: UIViewController, UITextFieldDelegate {
         for i in 0 ..< Int(numOfDecksField.text!)!{
             deckShuffled.append(gameModel.shuffle(cards: [decksCopy[i]]) )
         }
-        //decksCopy = deckShuffled[0]
-        print(deckShuffled)
+        for i in 0 ..< deckShuffled.count{
+            printDeck(deckNumber: i+1, deck: deckShuffled[i])
+        }
+    }
+    func printDeck(deckNumber: Int, deck:[Card]){
+        var output = "Deck Number \(deckNumber) \n\n"
+        for i in 0 ..< 52{
+            output.append("Card: \(i+1) Suit: \(deck[i].suit.simpleDescription()) Value: \(deck[i].digit.description)\n")
+        }
+        print(output)
     }
     @IBAction func userClickStand(_ sender: UIButton) {
     }
