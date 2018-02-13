@@ -65,14 +65,18 @@ class BlackJackGameModel {
     init() {
         resetGame()
     }
-    func shuffle(cards: [Card]){
-        var copy = cards
+    func shuffle(cards: [Card]) -> [Card]{
+        var copy = [cards]
         var shuffledTemp = [Card]()
-        for _ in 0..<shuffledTemp.count{
-            let rand = Int(arc4random_uniform(UInt32(shuffledTemp.count)))
-            shuffledTemp.append(copy.remove(at: rand))
+        var rand: Int
+        for i in 0..<52{
+            rand = Int(arc4random_uniform(UInt32(52)))
+            shuffledTemp.append(copy.remove(at: rand)[i])
         }
-        self.cards = shuffledTemp
+        return shuffledTemp
+    }
+    public func getDeck() -> [Card]{
+        return cards
     }
     func resetGame() {
         cards = Card.generateDeck()
