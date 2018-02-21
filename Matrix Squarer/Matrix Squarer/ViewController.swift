@@ -18,6 +18,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func squarePressed(_ sender: UIButton) {
+        string2MatrixArray(inputField.text!)
+    }
     func string2MatrixArray(_ Input: String){
         var temp = Input.components(separatedBy: ";")
         var temp2 = Array<[String]>()
@@ -32,11 +35,12 @@ class ViewController: UIViewController {
         for m in 0..<Input.count{
             for n in 0..<Input[m].count{
                 let temp = Float(Input[m][n])
-                output.append(String(temp!*temp!) + ", ")
+                output.append(String(temp!*temp!) + " ")
             }
-            output.removeLast(2)
+            output.removeLast()
             output.append(";")
         }
+        output.removeLast()
         return output
     }
     

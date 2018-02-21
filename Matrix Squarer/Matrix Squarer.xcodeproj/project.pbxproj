@@ -12,7 +12,6 @@
 		082FF7EC203B3797000FECB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082FF7EA203B3797000FECB5 /* Main.storyboard */; };
 		082FF7EE203B3797000FECB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 082FF7ED203B3797000FECB5 /* Assets.xcassets */; };
 		082FF7F1203B3797000FECB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082FF7EF203B3797000FECB5 /* LaunchScreen.storyboard */; };
-		082FF7F9203B3BE4000FECB5 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082FF7F8203B3BE4000FECB5 /* Matrix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		082FF7ED203B3797000FECB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		082FF7F0203B3797000FECB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		082FF7F2203B3797000FECB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		082FF7F8203B3BE4000FECB5 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 				082FF7ED203B3797000FECB5 /* Assets.xcassets */,
 				082FF7EF203B3797000FECB5 /* LaunchScreen.storyboard */,
 				082FF7F2203B3797000FECB5 /* Info.plist */,
-				082FF7F8203B3BE4000FECB5 /* Matrix.swift */,
 			);
 			path = "Matrix Squarer";
 			sourceTree = "<group>";
@@ -141,7 +138,6 @@
 			files = (
 				082FF7E9203B3797000FECB5 /* ViewController.swift in Sources */,
 				082FF7E7203B3797000FECB5 /* AppDelegate.swift in Sources */,
-				082FF7F9203B3BE4000FECB5 /* Matrix.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
