@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var inputField: UITextField!
+    @IBOutlet weak var elementsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +23,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func enqueuePressed(_ sender: UIButton) {
+    }
+    @IBAction func dequeuePressed(_ sender: UIButton) {
+    }
+    @IBAction func showElementsPressed(_ sender: UIButton) {
+    }
+    
 }
 
