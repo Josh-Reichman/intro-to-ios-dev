@@ -7,11 +7,15 @@
 //
 
 import Foundation
+
 struct Stack<T> {
+    
     var array: [T] = []
+    
     mutating func push(_ element: T) {
         array.append(element)
     }
+    
     mutating func pop() -> T? {
         if !array.isEmpty {
             let index = array.count - 1
@@ -33,7 +37,8 @@ struct Stack<T> {
     var count: Int {
         return array.count
     }
-    var isEmpty: Bool {
+    
+    func isEmpty() -> Bool {
         return array.isEmpty
     }
 }

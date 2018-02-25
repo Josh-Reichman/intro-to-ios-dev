@@ -10,10 +10,11 @@ import Foundation
 
 public struct Queue<T> {
     var list = [T]()
-
+    
     mutating func enqueue(_ element: T) {
         list.append(element)
     }
+    
     mutating func dequeue() -> T? {
         if !list.isEmpty {
             return list.removeFirst()
@@ -30,11 +31,15 @@ public struct Queue<T> {
         }
     }
     
+    mutating func clear(){
+        list.removeAll()
+    }
+    
     var count: Int {
         return list.count
     }
     
-    var isEmpty: Bool {
+    func isEmpty() -> Bool {
         return list.isEmpty
     }
 }

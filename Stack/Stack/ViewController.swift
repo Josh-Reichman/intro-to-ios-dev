@@ -10,19 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private var stack: Stack<Any>
+    
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
+    
+    required init?(coder aDecoder: NSCoder) {
+        stack = Stack<Any>()
+        super.init(coder: aDecoder)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func pressedConvertButton(_ sender: UIButton) {
+        
     }
     
 }
