@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var elementsLabel: UILabel!
-    
+    var queueList = [String]()
     private var queue: Queue<Any>
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,16 +26,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func enqueuePressed(_ sender: UIButton) {
-        queue.enqueue(inputField.text as Any)
+        if(inputField.text != ""){
+            queueList.append(inputField.text!)
+            queue.enqueue(Int(inputField.text!)!)
+        }
     }
     
     @IBAction func dequeuePressed(_ sender: UIButton) {
-        queue.dequeue()
+        if(!queueList.isEmpty){
+            queueList.removeFirst()
+            queue.dequeue()
+        }
     }
     
     @IBAction func showElementsPressed(_ sender: UIButton) {
         if !queue.isEmpty() {
-            // put code in here
+            var temp = ""
+            for i in queueList{
+                temp.append(i + " ")
+            }
+            elementsLabel.text = temp
         }
         else{
             elementsLabel.text = "No Elements"
