@@ -13,11 +13,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mySpecialView: UIView!
     var specialView : UIView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let caseID = 9
+    var specialView2 : UIView!
+    fileprivate func create(_ caseID: Int) {
         switch caseID{
         case 1:
             let v = UIView(frame: CGRect(100, 100, 50, 50))
@@ -132,9 +129,27 @@ class ViewController: UIViewController {
             
             specialView.addGestureRecognizer(panGestureRec)
             
+        case 10:
+            /*let pinchGestureRec = UIPinchGestureRecognizer(target: self, action: #selector(ViewController.zoom(<#T##sender: ViewController##ViewController#>)))
+            */
+            specialView2 = UIView(frame: CGRect(100, 100, 150, 150))
+            specialView2.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
+            self.view.addSubview(specialView2)
+            
+            //specialView2.addGestureRecognizer(pinchGestureRec)
         default:
             break
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        let caseID = 9
+        let caseID2 = 10
+        create(caseID)
+        create(caseID2)
+
         
     }
     
@@ -153,8 +168,31 @@ class ViewController: UIViewController {
             break
             
         }
-        
-        
     }
+    @IBAction func zoom(_ sender: UIPinchGestureRecognizer) {
+        switch sender.state{
+        case .changed, .ended:
+            let scale = sender.scale
+            specialView2.bounds = specialView2.bounds.applying(CGAffineTransform(scaleX: scale, y: scale))
+            sender.scale = 1
+            
+        default:
+            break
+            
+        }
+    }
+    /*
+    @objc func zoom(recognizer: UIPinchGestureRecognizer){
+        switch recognizer.state{
+        case .changed, .ended:
+            let scale = recognizer.scale
+            specialView2.bounds = specialView2.bounds.applying(CGAffineTransform(scaleX: scale, y: scale))
+            recognizer.scale = 1
+            
+        default:
+            break
+            
+        }
+    }*/
 }
 
