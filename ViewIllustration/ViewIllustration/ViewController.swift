@@ -1,28 +1,27 @@
 //
 //  ViewController.swift
-//  Pedigree Drawer
+//  ViewIllustration
 //
-//  Created by Josh Reichman on 2/28/18.
-//  Copyright © 2018 Josh Reichman. All rights reserved.
+//  Created by Jing Li on 2/26/18.
+//  Copyright © 2018 Jing Li. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
     
     @IBOutlet weak var mySpecialView: UIView!
     var specialView : UIView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let caseID = 9
         switch caseID{
         case 1:
-            let v = UIView(frame: CGRect(100, 100, 50, 50))
-            v.backgroundColor = .red
-            self.view.addSubview(v)
+                let v = UIView(frame: CGRect(100, 100, 50, 50))
+                v.backgroundColor = .red
+                self.view.addSubview(v)
         case 2:
             let v1 = UIView(frame: CGRect(100, 100, 150, 150))
             v1.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
@@ -53,7 +52,7 @@ class ViewController: UIViewController {
             let pt = v1.center
             
             v2.center = v1.convert(v1.center, from: v1.superview)
-            
+        
         case 4:
             let v1 = UIView(frame: CGRect(100, 100, 150, 150))
             v1.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
@@ -137,7 +136,7 @@ class ViewController: UIViewController {
         }
         
     }
-    
+    //Pan Red
     @objc func pan(recognizer: UIPanGestureRecognizer){
         switch recognizer.state{
         case .changed, .ended:
@@ -155,6 +154,19 @@ class ViewController: UIViewController {
         }
         
         
+    }
+    //Zoom Green
+    @IBAction func zoom(_ sender: UIPinchGestureRecognizer) {
+        switch sender.state{
+        case .changed, .ended:
+            let scale = sender.scale
+            mySpecialView.bounds = mySpecialView.bounds.applying(CGAffineTransform(scaleX: scale, y: scale))
+            sender.scale = 1
+            
+        default:
+            break
+            
+        }
     }
 }
 
