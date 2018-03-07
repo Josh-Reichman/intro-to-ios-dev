@@ -1,24 +1,22 @@
 //
-//  SecondViewController.swift
+//  ThirdViewController.swift
 //  MultipleMVCs
 //
-//  Created by Josh Reichman on 3/5/18.
+//  Created by Josh Reichman on 3/7/18.
 //  Copyright © 2018 Josh Reichman. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ThirdViewController: UIViewController {
 
-    @IBOutlet weak var myText: UITextField!
     @IBOutlet weak var myLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-        myLabel.text = myModel
     }
-    
-    var myModel : String?
+
     /*
     // MARK: - Navigation
 

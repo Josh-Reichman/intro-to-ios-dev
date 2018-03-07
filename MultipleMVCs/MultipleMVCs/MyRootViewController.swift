@@ -5,7 +5,7 @@
 //  Created by Josh Reichman on 3/5/18.
 //  Copyright © 2018 Josh Reichman. All rights reserved.
 //
-
+// New File -> Cocoa Touch
 import UIKit
 
 class MyRootViewController: UIViewController {
@@ -30,7 +30,10 @@ class MyRootViewController: UIViewController {
             case "The2ndViewController":
                 //dvc stands for destination view controller
                 let dvc = segue.destination as! SecondViewController
-                dvc.myModel = myModelInRootVC
+                dvc.myModel = "This is actually the 2nd VC"
+            case "The3rdViewController":
+                let dvc = segue.destination as! ThirdViewController
+                //something else
             default:
                 break
             }
