@@ -14,9 +14,12 @@ class MyRootViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        myLabel.text = myModelInRootVC
+
     }
 
-    var myModelInRootVC = "this is rootVC"
+    @IBOutlet weak var myLabel: UILabel!
+    var myModelInRootVC : String? = "this is rootVC"
 
     
     // MARK: - Navigation
@@ -37,6 +40,12 @@ class MyRootViewController: UIViewController {
             default:
                 break
             }
+        }
+    }
+    @IBAction func myUnwindAction( _ unwindSegue: UIStoryboardSegue){
+        if let vc = unwindSegue.source as? SecondViewController{
+            myModelInRootVC = vc.myText.text
+            myLabel.text = vc.myText.text
         }
     }
  

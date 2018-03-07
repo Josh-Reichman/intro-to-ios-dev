@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var myText: UITextField!
     @IBOutlet weak var myLabel: UILabel!
@@ -16,6 +16,15 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         myLabel.text = myModel
+        myText.delegate = self
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        myText.resignFirstResponder()
+        myModel = myText.text
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        myText.resignFirstResponder()
+        return true
     }
     
     var myModel : String?
