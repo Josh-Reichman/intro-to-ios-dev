@@ -156,7 +156,7 @@
             </objects>
             <point key="canvasLocation" x="2329" y="494"/>
         </scene>
-        <!--Item 2-->
+        <!--Item2-->
         <scene sceneID="Qsd-GD-v0g">
             <objects>
                 <viewController id="7aW-5u-Qt5" sceneMemberID="viewController">
@@ -175,13 +175,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ki2-dM-rOb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ZpU-5N-P2t"/>
+                    <tabBarItem key="tabBarItem" title="Item2" id="ZpU-5N-P2t"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5W-ic-mbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4" y="-610.34482758620697"/>
         </scene>
-        <!--Item 1-->
+        <!--Item1-->
         <scene sceneID="UU5-8a-pyB">
             <objects>
                 <viewController id="xHv-O7-Zot" sceneMemberID="viewController">
@@ -191,7 +191,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJy-UA-mzN">
                                 <rect key="frame" x="152" y="323" width="71" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -200,7 +200,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="d5F-36-nZg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Aug-UV-sVO"/>
+                    <tabBarItem key="tabBarItem" title="Item1" id="Aug-UV-sVO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iti-2d-O4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,11 +225,11 @@
             </objects>
             <point key="canvasLocation" x="-956" y="-941"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="f0z-0g-1Nm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vkv-m6-Xl3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="SuM-Zy-awY"/>
+                    <tabBarItem key="tabBarItem" badgeValue="Nav" systemItem="more" id="SuM-Zy-awY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YQS-cb-aGb">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

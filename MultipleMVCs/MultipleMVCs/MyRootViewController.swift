@@ -44,7 +44,7 @@ class MyRootViewController: UIViewController {
     }
     @IBAction func myUnwindAction( _ unwindSegue: UIStoryboardSegue){
         if let vc = unwindSegue.source as? SecondViewController{
-            myModelInRootVC = vc.myText.text
+            myModelInRootVC = vc.updateModel()
             myLabel.text = vc.myText.text
         }
     }

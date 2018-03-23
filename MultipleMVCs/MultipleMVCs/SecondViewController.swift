@@ -26,8 +26,13 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         myText.resignFirstResponder()
         return true
     }
+        var myModel : String?
     
-    var myModel : String?
+    func updateModel() -> String?{
+        myModel = myText.text
+        return myModel
+    }
+
     /*
     // MARK: - Navigation
 
