@@ -69,7 +69,7 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) //modify withIdentifier: when making custom ID in storyboard was withIdentifier "Cell"
 
         let object = objects[indexPath.row] as! NSDate
         cell.textLabel!.text = object.description
