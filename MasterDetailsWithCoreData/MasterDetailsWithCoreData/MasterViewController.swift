@@ -41,7 +41,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     @objc
     func insertNewObject(_ sender: Any) {
         let context = self.fetchedResultsController.managedObjectContext
-        let newEvent = Event(context: context)
+        let newEvent = Event(context: context) //creates core data object
              
         // If appropriate, configure the new managed object.
         newEvent.timestamp = Date()
