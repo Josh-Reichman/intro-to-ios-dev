@@ -3,5 +3,6 @@
 *.xcworkspacedata
 *.xcplayground
 *.xcbkptlist
+*Pedigree 2
 
 *.json
