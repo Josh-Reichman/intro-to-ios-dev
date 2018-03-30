@@ -16,8 +16,9 @@ extension Employee {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Employee> {
         return NSFetchRequest<Employee>(entityName: "Employee")
     }
-    @NSManaged public var id: Int64
+
     @NSManaged public var name: String?
+    @NSManaged public var id: Int64
     @NSManaged public var of: Employer?
 
 }

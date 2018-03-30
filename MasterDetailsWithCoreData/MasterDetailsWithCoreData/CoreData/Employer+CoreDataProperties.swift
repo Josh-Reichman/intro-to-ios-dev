@@ -18,6 +18,7 @@ extension Employer {
     }
 
     @NSManaged public var name: String?
+    @NSManaged public var taxID: Int16
     @NSManaged public var has: NSSet?
 
 }
