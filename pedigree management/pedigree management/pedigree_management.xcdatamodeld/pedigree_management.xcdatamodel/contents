@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Event" representedClassName="Event" codeGenerationType="class">
+        <attribute name="timestamp" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <userInfo/>
+    </entity>
+    <entity name="Individual" representedClassName="Individual" syncable="YES" codeGenerationType="class">
+        <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hasdisease" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Pedigree" representedClassName="Pedigree" syncable="YES" codeGenerationType="class"/>
+    <elements>
+        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Individual" positionX="279" positionY="216" width="128" height="120"/>
+        <element name="Pedigree" positionX="297" positionY="234" width="128" height="45"/>
+    </elements>
+</model>
