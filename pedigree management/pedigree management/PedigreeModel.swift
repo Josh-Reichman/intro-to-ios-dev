@@ -9,7 +9,16 @@
 import Foundation
 
 class Pedigree{
-    //var individual: [Individual]
-    //let proband: Individual
+    var family: [Individual]?
+    let proband: Individual
     
+    init(proband: Individual, _ family: [Individual]?){
+        self.proband = proband
+        if (family?.isEmpty)!{
+            self.family = nil
+        }
+        else{
+            self.family = family
+        }
+    }
 }

@@ -16,8 +16,9 @@ class Individual {
     var father: Individual
     var mother: Individual
     var hasDisease: Bool
-    init(firstName: String, lastName: String, gender: Gender, father: Individual, mother: Individual, hasDisease: Bool){
-        id = Int(arc4random())
+    
+    init(id: Int, firstName: String, lastName: String, gender: Gender, father: Individual, mother: Individual, hasDisease: Bool){
+        self.id = id
         self.firstName = firstName
         self.lastName = lastName
         self.gender = gender
